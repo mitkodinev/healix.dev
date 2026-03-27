@@ -376,7 +376,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 20px;
             margin-bottom: 20px;
         }
         
@@ -842,6 +842,127 @@
         </div>
     </section>
     
+    <!-- Supported Languages -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Supported Languages & Frameworks</h2>
+            <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto;">
+                Built for the most popular container ecosystems, with more coming soon.
+            </p>
+            
+            <div class="features-grid" style="margin-top: 48px;">
+                <div class="feature-card" style="border-color: var(--primary);">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #00FF9D 0%, #00D4FF 100%); color: var(--dark); font-weight: 800; font-family: Arial, sans-serif;">J</div>
+                    <h3>Java</h3>
+                    <p>Full support for Java containers including Spring Boot, Maven, and Gradle builds. Optimized for OpenJDK and Eclipse Temurin base images.</p>
+                    <span class="feature-metric" style="background: rgba(0, 255, 157, 0.2); color: var(--primary);">✓ Available Now</span>
+                </div>
+                
+                <div class="feature-card" style="border-color: var(--primary);">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #00FF9D 0%, #00D4FF 100%); color: var(--dark); font-weight: 800; font-family: Arial, sans-serif;">N</div>
+                    <h3>Node.js</h3>
+                    <p>Complete Node.js support with npm and yarn package managers. Works with Express, NestJS, and all popular frameworks.</p>
+                    <span class="feature-metric" style="background: rgba(0, 255, 157, 0.2); color: var(--primary);">✓ Available Now</span>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #00FF9D 0%, #00D4FF 100%); color: var(--dark); font-weight: 800; font-family: Arial, sans-serif;">Py</div>
+                    <h3>Python</h3>
+                    <p>Support for Python containers with pip, poetry, and pipenv. Django, Flask, FastAPI, and ML frameworks.</p>
+                    <span class="feature-metric" style="background: rgba(255, 184, 70, 0.2); color: var(--warning);">⏳ Coming Soon</span>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #00FF9D 0%, #00D4FF 100%); color: var(--dark); font-weight: 800; font-family: Arial, sans-serif;">Rs</div>
+                    <h3>Rust</h3>
+                    <p>Rust container support with Cargo builds and ultra-minimal production images for performance-critical applications.</p>
+                    <span class="feature-metric" style="background: rgba(255, 184, 70, 0.2); color: var(--warning);">⏳ Coming Soon</span>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #00FF9D 0%, #00D4FF 100%); color: var(--dark); font-weight: 800; font-family: Arial, sans-serif;">Go</div>
+                    <h3>Go</h3>
+                    <p>Golang container support with multi-stage builds and minimal Alpine-based images for maximum efficiency.</p>
+                    <span class="feature-metric" style="background: rgba(255, 184, 70, 0.2); color: var(--warning);">⏳ Coming Soon</span>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #00FF9D 0%, #00D4FF 100%); color: var(--dark); font-weight: 800; font-family: Arial, sans-serif; font-size: 16px;">.NET</div>
+                    <h3>.NET / C#</h3>
+                    <p>ASP.NET Core and .NET containers with NuGet package management and Microsoft base images.</p>
+                    <span class="feature-metric" style="background: rgba(255, 184, 70, 0.2); color: var(--warning);">⏳ Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Installation -->
+    <section class="section" style="background: linear-gradient(135deg, rgba(0, 255, 157, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%); border-top: 1px solid rgba(0, 255, 157, 0.1); border-bottom: 1px solid rgba(0, 255, 157, 0.1);">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Cross-Platform CLI</h2>
+            <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto;">
+                Install with a single command on macOS and Linux. Run locally or in your CI/CD pipeline.
+            </p>
+            
+            <div style="max-width: 700px; margin: 48px auto 0;">
+                <!-- Tabs -->
+                <div style="display: flex; gap: 8px; margin-bottom: -1px;">
+                    <button class="platform-tab active" data-platform="macos" style="flex: 1; padding: 16px 24px; background: var(--dark-light); border: 1px solid rgba(0, 255, 157, 0.2); border-bottom: none; border-radius: 12px 12px 0 0; color: var(--text); font-size: 16px; font-weight: 600; font-family: 'Manrope', sans-serif; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <span style="font-size: 20px;"></span>
+                        <span>macOS</span>
+                    </button>
+                    <button class="platform-tab" data-platform="linux" style="flex: 1; padding: 16px 24px; background: rgba(26, 31, 58, 0.5); border: 1px solid rgba(0, 255, 157, 0.1); border-bottom: none; border-radius: 12px 12px 0 0; color: var(--text-dim); font-size: 16px; font-weight: 600; font-family: 'Manrope', sans-serif; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <span>Linux</span>
+                    </button>
+                </div>
+                
+                <!-- Tab Content -->
+                <div class="platform-panel" style="background: var(--dark-light); border: 1px solid rgba(0, 255, 157, 0.2); border-radius: 0 12px 12px 12px; padding: 32px; transition: border-radius 0.3s ease;">
+                    <!-- macOS Content -->
+                    <div class="platform-content" data-platform="macos">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+                            <h3 style="margin: 0; font-size: 20px; font-weight: 700;">Install via Homebrew</h3>
+                            <span style="padding: 4px 12px; background: rgba(255, 184, 70, 0.2); border: 1px solid rgba(255, 184, 70, 0.3); border-radius: 6px; font-size: 13px; font-weight: 600; color: var(--warning);">Coming Soon</span>
+                        </div>
+                        
+                        <div class="code-example" style="margin: 0 0 20px 0; font-size: 16px; padding: 20px; background: var(--dark);">
+                            <span>$ brew install healix</span>
+                        </div>
+                        
+                        <p style="margin: 0; color: var(--text-dim); font-size: 14px;">
+                            Requires <a href="https://brew.sh" target="_blank" style="color: var(--primary); text-decoration: none;">Homebrew</a> package manager
+                        </p>
+                    </div>
+                    
+                    <!-- Linux Content -->
+                    <div class="platform-content" data-platform="linux" style="display: none;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+                            <h3 style="margin: 0; font-size: 20px; font-weight: 700;">Install via Package Manager</h3>
+                            <span style="padding: 4px 12px; background: rgba(255, 184, 70, 0.2); border: 1px solid rgba(255, 184, 70, 0.3); border-radius: 6px; font-size: 13px; font-weight: 600; color: var(--warning);">Coming Soon</span>
+                        </div>
+                        
+                        <div class="code-example" style="margin: 0 0 20px 0; font-size: 16px; padding: 20px; background: var(--dark);">
+                            <span style="opacity: 0.6;"># Debian/Ubuntu</span><br>
+                            <span>$ apt install healix</span><br><br>
+                            <span style="opacity: 0.6;"># RHEL/CentOS</span><br>
+                            <span>$ yum install healix</span>
+                        </div>
+                        
+                        <p style="margin: 0; color: var(--text-dim); font-size: 14px;">
+                            Native packages for Debian, Ubuntu, RHEL, and CentOS
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 32px; text-align: center;">
+                <p style="color: var(--text-dim); font-size: 14px;">
+                    Join the <a href="#emailForm" style="color: var(--primary); text-decoration: none; font-weight: 600;">early access waitlist</a> to be notified when Healix launches
+                </p>
+            </div>
+        </div>
+    </section>
+    
     <!-- Pricing -->
     <section class="section">
         <div class="container">
@@ -914,6 +1035,24 @@
         </div>
     </section>
     
+    <!-- Disclaimer -->
+    <section style="background: var(--dark-light); border-top: 1px solid rgba(0, 255, 157, 0.1); padding: 48px 0;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <div style="display: inline-flex; align-items: center; gap: 12px; padding: 12px 24px; background: rgba(0, 255, 157, 0.05); border: 1px solid rgba(0, 255, 157, 0.2); border-radius: 12px; margin-bottom: 16px;">
+                    <span style="font-size: 24px;">🤖</span>
+                    <span style="font-weight: 600; color: var(--primary);">Built with AI Assistance</span>
+                </div>
+                
+                <p style="color: var(--text-dim); font-size: 15px; line-height: 1.7; margin: 0;">
+                    Healix Container Immunity is developed using AI-augmented coding techniques. While we strive for the highest quality, 
+                    AI-assisted development may introduce unexpected behaviors or bugs. We're committed to transparency and continuous improvement. 
+                    If you encounter any issues, please <a href="https://github.com/healix/container-immunity/issues" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">report them on GitHub</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+    
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -927,10 +1066,7 @@
                 </div>
                 
                 <div class="footer-links">
-                    <a href="/cdn-cgi/l/email-protection#0c686562697a2261657867634c6b616d6560226f6361">Contact</a>
                     <a href="https://www.linkedin.com/in/mitkodinev/" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/healix" target="_blank">GitHub</a>
-                    <a href="https://twitter.com/healixdev" target="_blank">Twitter</a>
                 </div>
                 
                 <p class="copyright">
@@ -946,6 +1082,48 @@
     </div>
     
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Platform tab switching
+        const platformTabs = document.querySelectorAll('.platform-tab');
+        const platformContents = document.querySelectorAll('.platform-content');
+        const contentPanel = document.querySelector('.platform-panel');
+        
+        platformTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const platform = tab.getAttribute('data-platform');
+                
+                // Update tabs
+                platformTabs.forEach(t => {
+                    if (t.getAttribute('data-platform') === platform) {
+                        t.style.background = 'var(--dark-light)';
+                        t.style.color = 'var(--text)';
+                        t.style.borderColor = 'rgba(0, 255, 157, 0.2)';
+                        t.classList.add('active');
+                    } else {
+                        t.style.background = 'rgba(26, 31, 58, 0.5)';
+                        t.style.color = 'var(--text-dim)';
+                        t.style.borderColor = 'rgba(0, 255, 157, 0.1)';
+                        t.classList.remove('active');
+                    }
+                });
+                
+                // Update content panel border-radius based on active tab
+                if (platform === 'macos') {
+                    contentPanel.style.borderRadius = '0 12px 12px 12px';
+                } else if (platform === 'linux') {
+                    contentPanel.style.borderRadius = '12px 0 12px 12px';
+                }
+                
+                // Update content
+                platformContents.forEach(content => {
+                    if (content.getAttribute('data-platform') === platform) {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
         // Formspree AJAX form handling
         const forms = document.querySelectorAll('form[id^="emailForm"]');
         const successMessage = document.getElementById('successMessage');
