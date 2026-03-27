@@ -11,9 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- EmailOctopus Form -->
-    <script async src="https://eocampaign1.com/form/67fdee84-2992-11f1-830e-f77347854a37.js" data-form="67fdee84-2992-11f1-830e-f77347854a37"></script>
-    
     <style>
         :root {
             --primary: #00FF9D;
@@ -687,14 +684,14 @@
             </p>
             
             <div class="email-capture">
-                <form class="email-form" id="emailForm" action="https://emailoctopus.com/lists/67fdee84-2992-11f1-830e-f77347854a37/members/embedded/add" method="post">
+                <form class="email-form" id="emailForm" action="https://formspree.io/f/maqlndrr" method="POST">
                     <input 
                         type="email" 
                         class="email-input" 
                         placeholder="your@email.com" 
                         required
                         id="emailInput"
-                        name="emailAddress"
+                        name="email"
                     >
                     <button type="submit" class="btn">Join Waitlist</button>
                 </form>
@@ -900,14 +897,14 @@
                 <p>Join the waitlist and be among the first to try Container Immunity when we launch.</p>
                 
                 <div class="email-capture">
-                    <form class="email-form" id="emailForm2" action="https://emailoctopus.com/lists/67fdee84-2992-11f1-830e-f77347854a37/members/embedded/add" method="post">
+                    <form class="email-form" id="emailForm2" action="https://formspree.io/f/maqlndrr" method="POST">
                         <input 
                             type="email" 
                             class="email-input" 
                             placeholder="your@email.com" 
                             required
                             id="emailInput2"
-                            name="emailAddress"
+                            name="email"
                         >
                         <button type="submit" class="btn">Join Waitlist</button>
                     </form>
@@ -949,7 +946,7 @@
     </div>
     
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Email form handling
+        // Formspree AJAX form handling
         const forms = document.querySelectorAll('form[id^="emailForm"]');
         const successMessage = document.getElementById('successMessage');
         
@@ -958,34 +955,56 @@
                 e.preventDefault();
                 
                 const formData = new FormData(form);
-                const email = form.querySelector('input[type="email"]').value;
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.textContent;
                 
-                // Here you would send to your email collection service
-                // For now, just show success message
-                console.log('Email submitted:', email);
+                // Disable button and show loading
+                submitButton.disabled = true;
+                submitButton.textContent = 'Joining...';
                 
-                // Show success message
-                successMessage.classList.add('show');
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        // Show success message
+                        successMessage.classList.add('show');
+                        
+                        // Clear form
+                        form.reset();
+                        
+                        // Hide message after 4 seconds
+                        setTimeout(() => {
+                            successMessage.classList.remove('show');
+                        }, 4000);
+                    } else {
+                        alert('Oops! There was a problem. Please try again.');
+                    }
+                } catch (error) {
+                    alert('Oops! There was a problem. Please try again.');
+                }
                 
-                // Clear form
-                form.reset();
-                
-                // Hide message after 4 seconds
-                setTimeout(() => {
-                    successMessage.classList.remove('show');
-                }, 4000);
-                
-                // TODO: Replace with your actual email collection endpoint
-                // Example:
-                // await fetch('https://your-api.com/waitlist', {
-                //     method: 'POST',
-                //     headers: { 'Content-Type': 'application/json' },
-                //     body: JSON.stringify({ email })
-                // });
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
             });
         });
         
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-        
+                        e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
